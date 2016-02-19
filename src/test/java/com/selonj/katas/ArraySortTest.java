@@ -18,6 +18,7 @@ public class ArraySortTest {
     @Test
     public void pairItems() throws Exception {
         assertSortedArray(new int[]{2, 1}, equalTo(new int[]{1, 2}));
+        assertSortedArray(new int[]{1, 2}, equalTo(new int[]{1, 2}));
     }
 
     private void assertSortedArray(int[] array, Matcher<int[]> matcher) {
