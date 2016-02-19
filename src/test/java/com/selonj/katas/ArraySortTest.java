@@ -1,5 +1,6 @@
 package com.selonj.katas;
 
+import org.hamcrest.Matcher;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -11,19 +12,16 @@ import static org.junit.Assert.assertThat;
 public class ArraySortTest {
     @Test
     public void anItem() throws Exception {
-        int[] array = new int[]{1};
-
-        ArrayUtil.sort(array);
-
-        assertThat(array, equalTo(new int[]{1}));
+        assertSortedArray(new int[]{1}, equalTo(new int[]{1}));
     }
 
     @Test
     public void pairItems() throws Exception {
-        int[] array = new int[]{2, 1};
+        assertSortedArray(new int[]{2, 1}, equalTo(new int[]{1, 2}));
+    }
 
+    private void assertSortedArray(int[] array, Matcher<int[]> matcher) {
         ArrayUtil.sort(array);
-
-        assertThat(array, equalTo(new int[]{1, 2}));
+        assertThat(array, matcher);
     }
 }
