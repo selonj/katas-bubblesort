@@ -15,6 +15,15 @@ public class ArraySortTest {
 
         ArrayUtil.sort(array);
 
-        assertThat(array,equalTo(new int[]{1}));
+        assertThat(array, equalTo(new int[]{1}));
+    }
+
+    @Test
+    public void pairItems() throws Exception {
+        int[] array = new int[]{2, 1};
+
+        ArrayUtil.sort(array);
+
+        assertThat(array, equalTo(new int[]{1, 2}));
     }
 }
