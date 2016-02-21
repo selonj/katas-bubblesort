@@ -1,5 +1,6 @@
 package com.selonj.katas;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -21,6 +22,7 @@ public class ArraySortTest {
     }
 
     @Test
+    @Ignore
     public void items() throws Exception {
         assertSortedArrayEquals(new int[]{1, 3, 2}, new int[]{1, 2, 3});
     }

@@ -5,11 +5,13 @@ package com.selonj.katas;
  */
 public class ArrayUtil {
     public static void sort(int[] array) {
-        if (array.length > 1) {
-            if (array[0] > array[1]) {
-                int tmp = array[0];
-                array[0] = array[1];
-                array[1] = tmp;
+        int j = 1;
+        if (array.length > j) {
+            int i = j - 1;
+            if (array[i] > array[j]) {
+                int tmp = array[i];
+                array[i] = array[j];
+                array[j] = tmp;
             }
         }
     }
