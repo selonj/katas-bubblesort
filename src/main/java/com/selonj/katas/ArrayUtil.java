@@ -5,8 +5,7 @@ package com.selonj.katas;
  */
 public class ArrayUtil {
     public static void sort(int[] array) {
-        int j = 1;
-        if (array.length > j) {
+        for (int j = 1; j < array.length; j++) {
             int i = j - 1;
             if (array[i] > array[j]) {
                 int tmp = array[i];

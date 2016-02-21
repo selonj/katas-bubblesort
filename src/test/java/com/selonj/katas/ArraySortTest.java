@@ -22,7 +22,6 @@ public class ArraySortTest {
     }
 
     @Test
-    @Ignore
     public void items() throws Exception {
         assertSortedArrayEquals(new int[]{1, 3, 2}, new int[]{1, 2, 3});
     }
