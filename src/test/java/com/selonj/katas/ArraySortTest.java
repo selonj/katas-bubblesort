@@ -20,6 +20,11 @@ public class ArraySortTest {
         assertSortedArrayEquals(new int[]{1, 2}, new int[]{1, 2});
     }
 
+    @Test
+    public void items() throws Exception {
+        assertSortedArrayEquals(new int[]{1, 3, 2}, new int[]{1, 2, 3});
+    }
+
     private void assertSortedArrayEquals(int[] array, int[] expected) {
         ArrayUtil.sort(array);
         assertThat(array, equalTo(expected));
