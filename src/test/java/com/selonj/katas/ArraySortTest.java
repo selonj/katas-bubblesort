@@ -11,15 +11,16 @@ import static org.junit.Assert.assertThat;
 public class ArraySortTest {
     @Test
     public void anItem() throws Exception {
-        int[] array = new int[]{1};
-        ArrayUtil.sort(array);
-        assertThat(array, equalTo(new int[]{1}));
+        assertSortedArrayEquals(new int[]{1}, new int[]{1});
     }
 
     @Test
     public void pairItems() throws Exception {
-        int[] array = new int[]{2, 1};
+        assertSortedArrayEquals(new int[]{2, 1}, new int[]{1, 2});
+    }
+
+    private void assertSortedArrayEquals(int[] array, int[] expected) {
         ArrayUtil.sort(array);
-        assertThat(array, equalTo(new int[]{1, 2}));
+        assertThat(array, equalTo(expected));
     }
 }
