@@ -17,6 +17,7 @@ public class ArraySortTest {
     @Test
     public void pairItems() throws Exception {
         assertSortedArrayEquals(new int[]{2, 1}, new int[]{1, 2});
+        assertSortedArrayEquals(new int[]{1, 2}, new int[]{1, 2});
     }
 
     private void assertSortedArrayEquals(int[] array, int[] expected) {
