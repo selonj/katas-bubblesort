@@ -6,12 +6,12 @@ package com.selonj.katas;
 public class ArrayUtil {
     public static void sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            sort1(array, i);
+            sort1(array, array.length - i + 1);
         }
     }
 
-    private static void sort1(int[] array, int i) {
-        for (int j = 1; j < array.length - i + 1; j++) {
+    private static void sort1(int[] array, int end) {
+        for (int j = 1; j < end; j++) {
             if (array[j - 1] > array[j]) {
                 swap(array, j - 1, j);
             }
